@@ -1,9 +1,24 @@
 {
   "name": "fish-functions",
   "version": "1.0.0",
+  "private": true,
   "description": "My custom functions for the Fish Shell",
   "repository": "git@github.com:will-stone/fish-functions.git",
-  "author": "Will Stone <654103+will-stone@users.noreply.github.com>",
   "license": "MIT",
-  "private": true
+  "author": "Will Stone <654103+will-stone@users.noreply.github.com>",
+  "scripts": {
+    "pretty-package": "prettier --write package.json"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn pretty-package && git add package.json"
+    }
+  },
+  "prettier": "@will-stone/prettier-config",
+  "devDependencies": {
+    "@will-stone/prettier-config": "^2.0.1",
+    "husky": "^3.1.0",
+    "prettier": "^1.19.1",
+    "prettier-plugin-packagejson": "^2.0.6"
+  }
 }
