@@ -29,7 +29,7 @@ Wraps `ls` to show hidden files and folders by default.
 ### Usage
 
 ```sh
-ls # ls -aG
+ls # ls -AFG
 ```
 
 ## `v`
