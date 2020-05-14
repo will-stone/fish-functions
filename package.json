@@ -10,17 +10,15 @@
     }
   },
   "lint-staged": {
-    "*.{json,md}": [
-      "prettier --write",
-      "git add"
+    "*.{css,json,md}": [
+      "prettier --write"
     ]
   },
   "prettier": "@will-stone/prettier-config",
   "devDependencies": {
-    "@will-stone/prettier-config": "^2.0.1",
-    "husky": "^3.1.0",
-    "lint-staged": ">=8",
-    "prettier": "^1.19.1",
-    "prettier-plugin-packagejson": "^2.0.6"
+    "@will-stone/prettier-config": "^3.0.1",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
   }
 }
