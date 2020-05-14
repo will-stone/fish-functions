@@ -4,11 +4,17 @@ My custom functions for the Fish Shell.
 
 ## Install
 
-With [fisherman](https://github.com/jorgebucaran/fisher)
+With [fisherman]
 
 ```
 fisher add will-stone/fish-functions
 ```
+
+## Prompt
+
+A practical Fish Shell prompt based on [Sindre Sorhus's famous Pure prompt].
+
+![impure]
 
 ## `c`
 
@@ -47,3 +53,7 @@ npm   6.3.0
 ruby  2.5.1
 yarn  1.9.1
 ```
+
+[fisherman]: https://github.com/jorgebucaran/fisher
+[impure]: ./screenshot.png
+[sindre sorhus's famous pure prompt]: https://github.com/sindresorhus/pure
