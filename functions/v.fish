@@ -16,6 +16,7 @@ function _v_version_entry
 end
 
 function _v_all_versions
+  _v_version_entry "deno" "--version"
   _v_version_entry "go" "version"
   _v_version_entry "node" "-v"
   _v_version_entry "npm" "-v"
