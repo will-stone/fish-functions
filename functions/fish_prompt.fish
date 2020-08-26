@@ -6,6 +6,8 @@ set fish_prompt_pwd_dir_length 0
 
 # Git prompt
 set __fish_git_prompt_show_informative_status
+set __fish_git_prompt_showcolorhints
+set __fish_git_prompt_color_branch magenta
 
 function fish_prompt
   # status of last command can change before the end so we store it in this var.
@@ -14,20 +16,12 @@ function fish_prompt
   printf "\n\n"
 
   set_color --bold
-
   set_color blue
   printf (prompt_pwd)
+  set_color normal
 
-  # sets colour for  icon. Branch colour is set above.
-  set_color magenta 
+  set_color --bold
   fish_git_prompt " %s"
-
-  if test -f "package.json"
-    set -l node_version (eval node --version)
-    set_color green
-    printf " ⬢ $node_version"
-  end
-  
   set_color normal
 
   printf "\n"
@@ -39,6 +33,15 @@ function fish_prompt
   else
     set_color red
     printf "! "
+    set_color normal
+  end
+end
+
+function fish_right_prompt
+  if test -f "package.json"
+    set -l node_version (eval node --version)
+    set_color green
+    printf " ⬢ $node_version"
     set_color normal
   end
 end
