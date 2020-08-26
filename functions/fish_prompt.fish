@@ -6,23 +6,6 @@ set fish_prompt_pwd_dir_length 0
 
 # Git prompt
 set __fish_git_prompt_show_informative_status
-set __fish_git_prompt_color_branch brblack
-set __fish_git_prompt_color_cleanstate brblack
-set __fish_git_prompt_color_dirtystate yellow
-set __fish_git_prompt_color_stagedstate green
-set __fish_git_prompt_color_upstream cyan
-
-# Git Characters
-set __fish_git_prompt_char_dirtystate '+'
-set __fish_git_prompt_char_stagedstate '•'
-set __fish_git_prompt_char_stateseparator ' '
-set __fish_git_prompt_char_upstream_prefix ' '
-set __fish_git_prompt_char_cleanstate '' # ✓
-set __fish_git_prompt_char_invalidstate '×'
-# set __fish_git_prompt_char_upstream_equal ''
-# set __fish_git_prompt_char_upstream_ahead '↑'
-# set __fish_git_prompt_char_upstream_behind '↓'
-# set __fish_git_prompt_char_upstream_diverged '⇅'
 
 function fish_prompt
   # status of last command can change before the end so we store it in this var.
@@ -30,12 +13,21 @@ function fish_prompt
 
   printf "\n\n"
 
+  set_color --bold
+
   set_color blue
   printf (prompt_pwd)
-  set_color normal
 
-  set_color brblack
-  __fish_git_prompt " %s"
+  # sets colour for  icon. Branch colour is set above.
+  set_color magenta 
+  fish_git_prompt " %s"
+
+  if test -f "package.json"
+    set -l node_version (eval node --version)
+    set_color green
+    printf " ⬢ $node_version"
+  end
+  
   set_color normal
 
   printf "\n"
