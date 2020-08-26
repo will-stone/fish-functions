@@ -11,19 +11,30 @@ function _v_version_entry
   if type -q $cmd
     set -l ver (eval $cmd $arg)
     set -l semver (_v_semver_version $ver)
-    printf "$cmd $semver\n"
+    echo "$cmd|$semver"
   end
 end
 
 function _v_all_versions
-  _v_version_entry "deno" "--version"
-  _v_version_entry "go" "version"
+  set_color green
   _v_version_entry "node" "-v"
+  
+  set_color red
   _v_version_entry "npm" "-v"
-  _v_version_entry "ruby" "-v"
+
+  set_color blue
   _v_version_entry "yarn" "-v"
+
+  set_color white
+  _v_version_entry "deno" "--version"
+
+  set_color cyan
+  _v_version_entry "go" "version"
+
+  set_color red
+  _v_version_entry "ruby" "-v"
 end
 
 function v --description 'Shows versions for commonly installed items'
-  _v_all_versions | column -t
+  _v_all_versions | column -t -s "|"
 end
