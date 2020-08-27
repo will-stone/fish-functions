@@ -32,7 +32,7 @@ function fish_prompt
     set_color normal
   else
     set_color red
-    printf "! "
+    printf "✖ "
     set_color normal
   end
 end
