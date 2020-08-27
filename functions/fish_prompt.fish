@@ -41,7 +41,7 @@ function fish_right_prompt
   if test -f "package.json"
     set -l node_version (eval node --version)
     set_color green
-    printf " ⬢ $node_version"
+    printf "⬢ $node_version"
     set_color normal
   end
 end
