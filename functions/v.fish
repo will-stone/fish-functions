@@ -36,6 +36,9 @@ function _v_all_versions
 
   set_color blue
   _v_version_entry "fish" "--version"
+
+  set_color yellow
+  _v_version_entry "python" "--version"
 end
 
 function v --description 'Shows versions for commonly installed items'
