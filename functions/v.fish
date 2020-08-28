@@ -33,6 +33,9 @@ function _v_all_versions
 
   set_color red
   _v_version_entry "ruby" "-v"
+
+  set_color blue
+  _v_version_entry "fish" "--version"
 end
 
 function v --description 'Shows versions for commonly installed items'
