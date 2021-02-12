@@ -7,7 +7,7 @@ My custom functions for the Fish Shell.
 With [fisherman]
 
 ```
-fisher add will-stone/fish-functions
+fisher install will-stone/fish-functions
 ```
 
 ## Prompt
