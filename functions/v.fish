@@ -22,6 +22,9 @@ function v --description 'Shows versions for commonly installed items'
   set_color red
   _v_version_entry "npm" "-v"
 
+  set_color red
+  _v_version_entry "npx" "-v"
+
   set_color blue
   _v_version_entry "yarn" "-v"
 
