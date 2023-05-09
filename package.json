@@ -4,10 +4,8 @@
   "description": "My custom functions for the Fish Shell",
   "repository": "git@github.com:will-stone/fish-functions.git",
   "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+  "scripts": {
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{css,json,md}": [
@@ -16,9 +14,9 @@
   },
   "prettier": "@will-stone/prettier-config",
   "devDependencies": {
-    "@will-stone/prettier-config": "^3.0.1",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.2",
-    "prettier": "^2.0.5"
+    "@will-stone/prettier-config": "^6.0.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8"
   }
 }
