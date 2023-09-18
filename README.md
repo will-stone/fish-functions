@@ -24,12 +24,12 @@ c ./dir/dir # code ./dir/dir
 
 ## `ls`
 
-Wraps `exa` to show hidden files and folders by default, and adds icons.
+Wraps `eza` to show hidden files and folders by default, and adds icons.
 
 ### Usage
 
 ```sh
-ls # exa --all --group-directories-first --icons
+ls # eza --all --group-directories-first --icons
 ```
 
 ## `v`

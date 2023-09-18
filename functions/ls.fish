@@ -1,3 +1,3 @@
-function ls --wraps exa --description 'List contents of directory'
-    command exa --all --group-directories-first --icons $argv
+function ls --wraps eza --description 'List contents of directory'
+    command eza --all --group-directories-first --icons $argv
 end
