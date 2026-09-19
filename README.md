@@ -41,11 +41,16 @@ Shows versions for commonly installed items.
 ```sh
 v
 
-go    1.10.2
-node  10.8.0
-npm   6.3.0
-ruby  2.5.1
-yarn  1.9.1
+fish     4.9.3          14ms  /opt/homebrew/bin/fish
+node     24.21.0        31ms  /Users/usr/.local/share/vite-plus/bin/node
+npm      12.0.2         89ms  /Users/usr/.local/share/vite-plus/bin/npm
+npx      12.0.2         87ms  /Users/usr/.local/share/vite-plus/bin/npx
+pnpm     12.4.2         28ms  /Users/usr/.local/share/vite-plus/bin/pnpm
+yarn     4.18.0        158ms  /Users/usr/.local/share/vite-plus/bin/yarn
+python3  3.9.6          19ms  /usr/bin/python3
+ruby     2.6.10         17ms  /usr/bin/ruby
+
+Total                  685ms
 ```
 
 [fisherman]: https://github.com/jorgebucaran/fisher
