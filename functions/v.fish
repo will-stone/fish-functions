@@ -25,6 +25,9 @@ function v --description 'Shows versions for commonly installed items'
     set_color red
     _v_version_entry npx -v
 
+    set_color yellow
+    _v_version_entry pnpm -v
+
     set_color blue
     _v_version_entry yarn -v
 
